@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="styleCliente.css">
+
+    <title>Document</title>
+</head>
+<body>
+        <form class=" formulario row gy-1 gx-1  justify-content-center p-5 ">
+            <div class="col-sm-2 gy-5 gx-5 text-center color ">
+                <div><h1 cla>Cliente<hr class="linea  opacity-100"></div>   
+                                                    
+                 </div>
+            
+            <div class=" dato row  p-2 justify-content-center">
+
+            <div class="row gy-3 gx-3 justify-content-center">
+            <div class="col-auto">
+
+              <div class="col-sm-2 p-3 input-group">
+                <div for="autoSizingInputGroup" class="input-group-text">Nombre</div>
+                <input type="text" class="form-control" id="autoSizingInputGroup"  required>
+                <div  class="invalid-feedback">
+                  Por favor ingrese informacion en este campo 
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+                <label class="visually-hidden" for="fecha_prestamo"></label>
+                <div class="col-sm-2 p-3 input-group">
+                  <div class="input-group-text">Fecha de Prestamo</div>
+                  <input type="date" class="form-control " id="fecha_prestamo" placeholder="" required>
+                  <div  class="invalid-feedback">
+                    Por favor ingrese informacion en este campo 
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2 mg-3">
+                <label class="visually-hidden" for="interes"></label>
+                <div class="col-sm-2 p-3 input-group">
+                  <div class="input-group-text">Interes</div>
+                  <input type="number" class="form-control " id="interes" placeholder="0" required>
+                  <div  class="invalid-feedback">
+                    Por favor ingrese informacion en este campo 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row gy-2 gx-3  p-4 justify-content-center ">
+              <div class="col-sm-3 p-3 ">
+                <label class="visually-hidden" for="cuotaP"></label>
+                <div class="col-sm-2 input-group">
+                  <div class="input-group-text sombra">Cuotas Pendientes</div>
+                  <input type="text" class="form-control " id="cuotaP" placeholder="0" readonly  required>
+                  <div  class="invalid-feedback">
+                    Por favor ingrese informacion en este campo 
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                  <label class="visually-hidden" for="valorPres"></label>
+                  <div class=" col-sm-3 p-3 input-group">
+                    <div class="input-group-text">Valor Prestado</div>
+                    <input type="number" class="form-control " id="valorPres"  required>
+                    <div  class="invalid-feedback">
+                      Por favor ingrese informacion en este campo 
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <label class="visually-hidden" for="total"></label>
+                  <div class="col-sm-3 p-3 input-group">
+                    <div class="input-group-text">Total a pagar</div>
+                    <input type="number" class="form-control" id="total"  readonly>
+                  </div>
+                </div>
+                </div>
+            </div>
+          </form>
+     
+           
+        <div class=" text-center p-1">
+            <button type="button" class="btn btn-primary" id="botonpagar" data-bs-toggle="modal" data-bs-target="#pago">
+                Pagar
+              </button>
+        </div>
+        </div>
+        
+        
+          
+  <!-- Modal -->
+  <div class="modal fade" id="pago" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" >Realizar Pago</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+     <form >
+        
+        <div class="col-auto">
+            <label class="visually-hidden" for="valor_pres"></label>
+            <div class="col-sm-2 p-3 input-group">
+              <div class="input-group-text">Valor prestamo</div>
+              <input type="text" class="form-control" id="valor_pres" placeholder="" readonly>
+            </div>
+
+          <div class="col-auto">
+              <label class="visually-hidden" for="intereses"></label>
+              <div class="col-sm-2 p-3 input-group">
+                <div class="input-group-text">Interes</div>
+                <input type="text" class="form-control" id="intereses" placeholder="" readonly>
+              </div>
+
+           <div class="col-auto">
+              <label class="visually-hidden" for="valor_pagar"></label>
+              <div class="col-sm-2 p-3 input-group">
+                <div class="input-group-text">Valor a Pagar</div>
+                <input type="text" class="form-control" id="valor_Pagar" placeholder="" >
+                
+              </div>
+
+           <div class="col-auto">
+              <label class="visually-hidden" for="cuota"></label>
+              <div class="col-sm-2 p-3 input-group">
+                <div class="input-group-text">$</div>
+                <input type="text" class="form-control" id="cuota" placeholder="Cuota" readonly>
+              </div>
+              
+              <div class="col-auto">
+                <label class="visually-hidden" for="pagoCapital"></label>
+                <div class="col-sm-2 p-3 input-group">
+                  <div class="input-group-text">Pago Capital</div>
+                  <input type="text" class="form-control" id="pagoCapital" placeholder=""readonly>
+                </div>       
+          </div>
+          
+          <div class="col-auto">
+            <label class="visually-hidden" for="valorInteres"></label>
+            <div class="col-sm-2 p-3 input-group">
+              <div class="input-group-text">Valor de Interes</div>
+              <input type="text" class="form-control" id="valorInteres" placeholder="" readonly>
+            </div>
+            <div class="col-auto">
+                <label class="visually-hidden" for="ValorActual"></label>
+                <div class="col-sm-2 p-3 input-group">
+                  <div class="input-group-text">Valor Actual de Prestamo</div>
+                  <input type="text" class="form-control" id="ValorActual" placeholder="" readonly>
+                </div>
+
+     </form>
+          
+              
+                      
+                                   
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btncerrar" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" name="Guardar" id="Guardar"> Save changes</button>
+        </div>
+      </div>
+    </div>           
+         </div>
+         
+        </div>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/sweetalert2.all.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/logic.js"></script>
+
+</body>
+</html>

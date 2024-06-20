@@ -1,0 +1,15 @@
+body {
+    background-color: rgba(199, 199, 198, 0.251);
+}
+hr.linea {
+    
+    border-radius: 0 0 100px 100px;
+    border:solid 5px rgb(86, 90, 210);
+}
+.input-group-text {
+    background-color: rgb(213, 221, 247);
+}
+
+.input-group-text,.form-control{
+    box-shadow: rgb(205, 202, 209) 4px 5px 8px;
+}
